@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="phone">
+        <div class="top">
+            <div class="camera"></div>
+        </div>
+        <div class="screen">
+            <div class="pages">
+                <div class="page page1">
+                   <h2>Orange</h2> 
+                   <h1>橘</h1>
+                   <div class="orange"></div>
+                </div>
+                <div class="page page2">
+                   <h2>page2</h2> 
+                   <p>橘子的果肉甜美多汁，含有多種維生素和礦物質，其中又以維生素C的含量最多，是預防壞血病的最佳食品。另外，橘子還含有大量的植物纖維，能幫助消化，也是很好的健胃劑和通便劑。</p>
+                </div>
+                <div class="page page3">
+                   <h2>page3</h2> 
+                   <p>每一瓣橘子裡，都有許多小顆粒，叫做「汁囊」，囊中的果汁約含有10％的糖和1％以下的檸檬酸，所以橘子吃起來總是甜中帶酸，這點也是孩子喜歡它的主要原因。</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="home_button">
+                <div class="square"></div>
+            </div>
+        </div>
+    </div>
+    <h3 class="status">The Best iphone we've ever made</h3>
+    <h2 class="phonename">iphone5</h2>
+    <div class="buttons">
+        <button class="i5">iphone5</button>
+        <button class="i5s">iphone5s</button>
+        <button class="i6">iphone6</button>
+        <button class="i6s">iphone6s</button>
+        <button class="wiggle">wiggle</button>
+        <button class="turn">turn around</button>
+    </div>
+
+<script>
+    var button_audio=new Audio("https://monoame.com/awi_class/ballsound/click14.wav");
+    var tap_audio=new Audio("https://monoame.com/awi_class/ballsound/click18.wav");
+    var home_audio=new Audio("https://monoame.com/awi_class/ballsound/click23.wav");
+    var wiggle_audio=new Audio("https://monoame.com/awi_class/ballsound/phonevi.mp3");
+    
+    $(".i5").click(function () {
+        $(".phone").css("width", "");
+        $(".screen").css("height", "");
+        $(".phonename").text($(this).text());
+        button_audio.play();
+    })
+    $(".i5s").click(function () {
+        $(".phone").css("width", "250px");
+        $(".screen").css("height", "420px");
+        $(".phonename").text($(this).text());
+        button_audio.play();
+    })
+    $(".i6").click(function () {
+        $(".phone").css("width", "270px");
+        $(".screen").css("height", "440px");
+        $(".phonename").text($(this).text());
+        button_audio.play();
+    })
+    $(".i6s").click(function () {
+        $(".phone").css("width", "300px");
+        $(".screen").css("height", "480px");
+        $(".phonename").text($(this).text());
+        button_audio.play();
+    })
+    var page=0;
+    $(".screen").click(function () {
+        page+=1;
+        if(page==3) page=0;
+        $(".pages").css("left", "-"+page*100+"%");
+        console.log(page);
+        tap_audio.play();
+    })
+    $(".home_button").click(function () {
+        page=0
+        $(".pages").css("left", "-"+page*100+"%");
+        home_audio.play();
+    })
+    $(".turn").click(function () {
+        $(".phone").css("transform", "rotate(360deg)");
+        button_audio.play();
+    })
+    $(".wiggle").click(function () {
+        // wiggleTime=0
+        var wiggleTime=0;
+        var wiggle = setInterval(() => {
+            if (wiggleTime<=20) {
+                console.log(wiggleTime);
+                wiggleTime+=1;
+                if (wiggleTime%2==0) {
+                    $(".phone").css("left", "-30px");
+                } else {
+                    $(".phone").css("left", "30px");
+                }
+                if (wiggleTime==21) {
+                    $(".phone").css("left", "0");
+                    clearInterval(wiggle);
+                }
+            }
+            console.log(wiggleTime);
+        }, 60);
+        button_audio.play();
+        wiggle_audio.play();
+    })
+
+</script>
+</body>
+</html>

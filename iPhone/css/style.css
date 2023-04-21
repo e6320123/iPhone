@@ -1,0 +1,186 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  font-family: 微軟正黑體;
+  vertical-align: top;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.phone {
+  width: 250px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.top {
+  height: 40px;
+}
+.top .camera {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #333;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.screen {
+  height: 350px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.screen .pages {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  left: 0;
+}
+.screen .pages .page {
+  color: #eee;
+  font-size: 12px;
+  white-space: normal;
+  font-size: initial;
+  display: inline-block;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+.screen .pages .page p {
+  margin-top: 30px;
+}
+.screen .pages .page h2 {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+}
+.screen .pages .page:before {
+  position: absolute;
+  content: "";
+  background-color: #FFAB36;
+  height: 60px;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.screen .pages .page:after {
+  position: absolute;
+  content: "";
+  background-color: #FFAB36;
+  height: 20px;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  left: 0;
+}
+.screen .pages .page1 {
+  background-color: #FFAB36;
+  color: white;
+}
+.screen .pages .page1 .orange {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  background-color: #FF9E17;
+}
+.screen .pages .page1 h1, .screen .pages .page1 h2 {
+  margin: 5px;
+}
+.screen .pages .page1 h2 {
+  font-size: 20px;
+}
+.screen .pages .page1 h1 {
+  font-size: 30px;
+}
+
+.bottom {
+  height: 60px;
+}
+.bottom .home_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.bottom .home_button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+.bottom .home_button .square {
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.status, .phonename {
+  color: white;
+  margin: 0;
+}
+
+.status {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.phonename {
+  margin: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+.buttons button {
+  background-color: transparent;
+  border: rgba(255, 255, 255, 0.2) solid 1px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
