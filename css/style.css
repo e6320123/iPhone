@@ -184,3 +184,6 @@ html, body {
   background-color: #fff;
   color: #333;
 }
+body {
+  zoom: 67%;
+}
