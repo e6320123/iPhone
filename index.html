@@ -90,9 +90,11 @@
         $(".pages").css("left", "-"+page*100+"%");
         home_audio.play();
     })
+    var times=1;
     $(".turn").click(function () {
-        $(".phone").css("transform", "rotate(360deg)");
+        $(".phone").css("transform", "rotate("+times*360+"deg)");
         button_audio.play();
+        times++;
     })
     $(".wiggle").click(function () {
         // wiggleTime=0
